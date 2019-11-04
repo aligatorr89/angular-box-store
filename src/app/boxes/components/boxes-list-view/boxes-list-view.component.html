@@ -1,7 +1,23 @@
-<mat-grid-list cols="7" rowHeight="1:1.5" gutterSize="1em">
-  <mat-grid-tile *ngFor="let box of boxes;">
-    <mat-grid-tile-header>{{ box.node.name }}</mat-grid-tile-header>
-    <img bind-src="box.node.iconUrl" alt="{{box.node.iconUrl}}">
-    <mat-grid-tile-footer>{{ box.node.cost + ' ' + box.node.currency}}</mat-grid-tile-footer>
+<mat-grid-list cols="7" rowHeight="400px" gutterSize="8px">
+  <mat-grid-tile *ngFor="let box of boxes; trackById">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>
+          <button *ngIf="hasNewCategory(box.node); else nbsp" mat-flat-button color="warn" class="icon">
+            NEW
+          </button>
+          <ng-template #nbsp>
+            <button mat-flat-button class="hidden">&nbsp;</button>
+          </ng-template>
+        </mat-card-title>
+        <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content (click)="onClick()">
+        <img mat-card-image bind-src="box.node.iconUrl" alt="{{box.node.iconUrl}}">
+        <div class="content bold">{{ box.node.name }}</div>
+        <div class="content bold">{{ box.node.cost + ' ' + box.node.currency }}</div>
+        <button mat-raised-button color="primary">View</button>
+      </mat-card-content>
+    </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
