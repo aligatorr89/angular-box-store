@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BoxesModule } from './boxes/boxes.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { BoxesModule } from './boxes/boxes.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    BoxesModule
+    AppRoutingModule,
+    BoxesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
