@@ -1,8 +1,12 @@
 <div class="">
   <table>
     <tbody>
-      <tr *ngFor="let box of boxes">
-
+      <tr *ngFor="let box of boxes;">
+        <td>{{ box.node.id }}</td>
+        <td><img bind-src="box.node.iconUrl" alt="" style="width: 100px;"></td>
+        <td>{{ box.node.name }}</td>
+        <td>{{ box.node.cost }}</td>
+        <td>{{ box.node.currency }}</td>
       </tr>
     </tbody>
   </table>
