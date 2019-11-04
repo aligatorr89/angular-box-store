@@ -1,13 +1,7 @@
-<div class="">
-  <table>
-    <tbody>
-      <tr *ngFor="let box of boxes;">
-        <td>{{ box.node.id }}</td>
-        <td><img bind-src="box.node.iconUrl" alt="" style="width: 100px;"></td>
-        <td>{{ box.node.name }}</td>
-        <td>{{ box.node.cost }}</td>
-        <td>{{ box.node.currency }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<mat-grid-list cols="7" rowHeight="1:1.5" gutterSize="1em">
+  <mat-grid-tile *ngFor="let box of boxes;">
+    <mat-grid-tile-header>{{ box.node.name }}</mat-grid-tile-header>
+    <img bind-src="box.node.iconUrl" alt="{{box.node.iconUrl}}">
+    <mat-grid-tile-footer>{{ box.node.cost + ' ' + box.node.currency}}</mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>
