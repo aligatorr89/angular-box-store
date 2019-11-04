@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IBox } from '../../../shared-lib/boxes/box';
 
 @Component({
   selector: 'app-boxes-list-view',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./boxes-list-view.component.sass']
 })
 export class BoxesListViewComponent implements OnInit {
+  @Input('boxes') boxes: IBox;
 
   constructor() { }
 
