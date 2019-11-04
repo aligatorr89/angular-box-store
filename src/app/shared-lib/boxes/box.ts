@@ -1,23 +1,23 @@
 export interface INodeTags {
-  id: string,
-  name: string,
-  __typename: string
+  id: string;
+  name: string;
+  __typename: string;
 }
 
 export interface INode {
-  id: string,
-  slug: string,
-  name: string,
-  cost: number,
-  currency: 'EUR',
-  iconUrl: string,
-  createdAt: string,
-  tags: INodeTags[],
-  ancestorBoxId: string,
-  purchasable: boolean,
-  openable: boolean,
-  sellable: boolean,
-  __typename: string
+  id: string;
+  slug: string;
+  name: string;
+  cost: number;
+  currency: 'EUR';
+  iconUrl: string;
+  createdAt: string;
+  tags: INodeTags[];
+  ancestorBoxId: string;
+  purchasable: boolean;
+  openable: boolean;
+  sellable: boolean;
+  __typename: string;
 }
 
 export interface IEdge {
@@ -32,8 +32,8 @@ export interface IBox {
 
 export interface IData {
   data: {
-    boxes: IBox
-  }
+    boxes: IBox;
+  };
 }
 
 export class Box {
