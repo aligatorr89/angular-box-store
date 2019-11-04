@@ -1,11 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { BoxesListView } from '../../../shared-lib/boxes/view';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { BoxesListView, BoxesListElementView } from '../../../shared-lib/boxes/view';
 import { INode } from '../../../shared-lib/boxes/box';
 
 @Component({
   selector: 'app-boxes-list-view',
   templateUrl: './boxes-list-view.component.html',
-  styleUrls: ['./boxes-list-view.component.sass']
+  styleUrls: ['./boxes-list-view.component.sass'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BoxesListViewComponent implements OnInit {
   @Input() boxes: BoxesListView;
@@ -26,7 +27,7 @@ export class BoxesListViewComponent implements OnInit {
     return false;
   }
 
-  trackById(index, row: INode) {
-    return row.id;
+  trackById(index, row: BoxesListElementView) {
+    return row.node.id;
   }
 }

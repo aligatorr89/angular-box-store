@@ -1,5 +1,5 @@
 <mat-grid-list cols="7" rowHeight="400px" gutterSize="8px">
-  <mat-grid-tile *ngFor="let box of boxes; trackById">
+  <mat-grid-tile *ngFor="let box of boxes; trackBy:trackById">
     <mat-card class="example-card">
       <mat-card-header>
         <mat-card-title>
