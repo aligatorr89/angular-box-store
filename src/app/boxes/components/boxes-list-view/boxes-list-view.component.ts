@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { BoxesListView, BoxesListElementView } from '../../../shared-lib/boxes/view';
 import { INode } from '../../../shared-lib/boxes/box';
 
@@ -10,6 +10,7 @@ import { INode } from '../../../shared-lib/boxes/box';
 })
 export class BoxesListViewComponent implements OnInit {
   @Input() boxes: BoxesListView;
+  @Output() onClickEmmiter: EventEmitter<BoxesListElementView> = new EventEmitter();
 
   constructor() { }
 
@@ -27,7 +28,11 @@ export class BoxesListViewComponent implements OnInit {
     return false;
   }
 
-  trackById(index, row: BoxesListElementView) {
+  trackById(index: number, row: BoxesListElementView) {
     return row.node.id;
+  }
+
+  onClick(row: BoxesListElementView) {
+    this.onClickEmmiter.emit(row);
   }
 }
