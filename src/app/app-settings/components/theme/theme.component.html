@@ -1,0 +1,5 @@
+<mat-select [(ngModel)]="currentTheme" (selectionChange)="changeTheme()">
+  <mat-option *ngFor="let theme of themes" [value]="theme">
+    {{ theme }}
+  </mat-option>
+</mat-select>

@@ -5,3 +5,21 @@ html, body
 body
   margin: 0
   font-family: Roboto, "Helvetica Neue", sans-serif
+
+@import '~@angular/material/theming'
+$indigo-pink: mat-light-theme(mat-palette($mat-indigo), mat-palette($mat-pink), mat-palette($mat-red))
+$purple-green: mat-dark-theme(mat-palette($mat-purple), mat-palette($mat-green), mat-palette($mat-red))
+$pink-bluegrey: mat-dark-theme(mat-palette($mat-pink), mat-palette($mat-blue), mat-palette($mat-grey))
+$deeppurple-amber: mat-light-theme(mat-palette($mat-deep-purple), mat-palette($mat-amber), mat-palette($mat-red))
+
+body.theme-purple-green
+  @include angular-material-theme($purple-green)
+
+body.theme-indigo-pink
+  @include angular-material-theme($indigo-pink)
+
+body.theme-pink-bluegrey
+  @include angular-material-theme($pink-bluegrey)
+
+body.theme-deeppurple-amber
+  @include angular-material-theme($deeppurple-amber)
