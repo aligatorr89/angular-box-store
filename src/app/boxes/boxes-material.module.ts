@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule, MatCardModule, MatDividerModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatDividerModule, MatDialogModule } from '@angular/material';
 
 @NgModule({
   declarations: [],
@@ -10,7 +10,8 @@ import { MatButtonModule, MatCardModule, MatDividerModule } from '@angular/mater
   exports: [
     MatButtonModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatDialogModule
   ]
 })
 export class BoxesMaterialModule { }

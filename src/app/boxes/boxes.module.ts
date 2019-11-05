@@ -9,15 +9,17 @@ import { BoxesMaterialModule } from './boxes-material.module';
 import { BoxComponent } from './components/box/box.component';
 import { BoxMetaViewComponent } from './components/box-meta-view/box-meta-view.component';
 import { BoxItemsViewComponent } from './components/box-items-view/box-items-view.component';
+import { BoxItemDetailViewComponent } from './components/box-item-detail-view/box-item-detail-view.component';
 
 @NgModule({
-  declarations: [BoxesListComponent, BoxesListViewComponent, BoxComponent, BoxMetaViewComponent, BoxItemsViewComponent],
+  declarations: [BoxesListComponent, BoxesListViewComponent, BoxComponent, BoxMetaViewComponent, BoxItemsViewComponent, BoxItemDetailViewComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
     HttpClientModule,
     BoxesRoutingModule,
     BoxesMaterialModule
-  ]
+  ],
+  entryComponents: [BoxItemDetailViewComponent]
 })
 export class BoxesModule { }
