@@ -6,6 +6,7 @@ export type BoxesListView = BoxesList.IEdge[];
 export type BoxesListElementView = BoxesList.IEdge;
 
 export type BoxItemsView = BoxItems.IEdge[];
+export type BoxItemDetailView = BoxItems.INode;
 
 export type BoxMetaView = BoxMeta.INode;
 

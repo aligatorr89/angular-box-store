@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
-
-import { BoxItemsView } from '../../../shared-lib/boxes/view';
+import { MatDialog } from '@angular/material/dialog';
+import { BoxItemDetailViewComponent } from '../box-item-detail-view/box-item-detail-view.component';
+import { BoxItemsView, BoxItemDetailView } from '../../../shared-lib/boxes/view';
 
 @Component({
   selector: 'app-box-items-view',
@@ -10,13 +11,18 @@ import { BoxItemsView } from '../../../shared-lib/boxes/view';
 })
 export class BoxItemsViewComponent implements OnInit {
   @Input() boxItems: BoxItemsView;
-  constructor() { }
+  showItemDetail = false;
+  selectedBoxItem: BoxItemDetailView;
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      console.log(this.boxItems)
-    }, 2500)
+  }
 
+  openDialog(itemDetail: BoxItemDetailView): void {
+    const dialogRef = this.dialog.open(BoxItemDetailViewComponent, {
+      width: '384px',
+      data: itemDetail
+    });
   }
 
 }
