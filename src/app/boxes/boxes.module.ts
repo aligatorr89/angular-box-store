@@ -12,7 +12,8 @@ import { BoxItemsViewComponent } from './components/box-items-view/box-items-vie
 import { BoxItemDetailViewComponent } from './components/box-item-detail-view/box-item-detail-view.component';
 
 @NgModule({
-  declarations: [BoxesListComponent, BoxesListViewComponent, BoxComponent, BoxMetaViewComponent, BoxItemsViewComponent, BoxItemDetailViewComponent],
+  declarations: [BoxesListComponent, BoxesListViewComponent, BoxComponent, BoxMetaViewComponent,
+    BoxItemsViewComponent, BoxItemDetailViewComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
