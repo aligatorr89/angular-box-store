@@ -13,6 +13,10 @@ export class BoxItemsViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      console.log(this.boxItems)
+    }, 2500)
+
   }
 
 }

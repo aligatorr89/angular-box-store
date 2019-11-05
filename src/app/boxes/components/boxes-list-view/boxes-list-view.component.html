@@ -1,5 +1,6 @@
-<mat-grid-list cols="7" rowHeight="400px" gutterSize="8px">
-  <mat-grid-tile *ngFor="let box of boxes; trackBy:trackById">
+<div fxLayout="row wrap" fxLayoutGap="2px" fxLayoutAlign="space-evenly center">
+  <div fxFlex.lt-xs="column" fxFlex.gt-xs="50%" fxFlex.gt-sm="33.333333%"
+      fxFlex.gt-md="16.666666%" fxFlex.gt-lg="12.5%" *ngFor="let box of boxes; trackBy:trackById">
     <mat-card>
       <mat-card-header>
         <mat-card-title>
@@ -19,5 +20,5 @@
         <button mat-raised-button color="primary">View</button>
       </mat-card-content>
     </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+  </div>
+</div>

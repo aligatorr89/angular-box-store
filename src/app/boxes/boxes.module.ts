@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { BoxesListComponent } from './components/boxes-list/boxes-list.component';
 import { BoxesListViewComponent } from './components/boxes-list-view/boxes-list-view.component';
 import { BoxesRoutingModule } from './boxes-routing.module';
@@ -13,6 +14,7 @@ import { BoxItemsViewComponent } from './components/box-items-view/box-items-vie
   declarations: [BoxesListComponent, BoxesListViewComponent, BoxComponent, BoxMetaViewComponent, BoxItemsViewComponent],
   imports: [
     CommonModule,
+    FlexLayoutModule,
     HttpClientModule,
     BoxesRoutingModule,
     BoxesMaterialModule

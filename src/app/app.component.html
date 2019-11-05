@@ -1,3 +1,8 @@
-<h1>{{ title }}</h1>
-<app-theme></app-theme>
+<div fxLayout="row wrap" fxLayoutGap="0" fxLayoutAlign="center center">
+  <div fxFlex.lt-xs="100%" fxFlex.gt-xs="50%" fxFlex.gt-sm="33.333333%"><h1>{{ title }}</h1></div>
+  <div fxFlex.lt-xs="100%" fxFlex.gt-xs="50%" fxFlex.gt-sm="33.333333%">
+    <app-theme></app-theme>
+  </div>
+  <div fxFlex.lt-xs="0%" fxFlex.gt-xs="0%" fxFlex.gt-sm="33.333333%">&nbsp;</div>
+</div>
 <router-outlet></router-outlet>
