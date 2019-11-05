@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { BoxesListView, BoxesListElementView } from '../../../shared-lib/boxes/view';
-import { INode } from '../../../shared-lib/boxes/box';
+import { INode } from '../../../shared-lib/boxes/boxes';
 
 @Component({
   selector: 'app-boxes-list-view',
@@ -10,14 +10,14 @@ import { INode } from '../../../shared-lib/boxes/box';
 })
 export class BoxesListViewComponent implements OnInit {
   @Input() boxes: BoxesListView;
-  @Output() onClickEmmiter: EventEmitter<BoxesListElementView> = new EventEmitter();
+  @Output() clickEmmiter: EventEmitter<BoxesListElementView> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  hasNewCategory(node: INode): boolean {
+  hasNewTag(node: INode): boolean {
     if (Array.isArray(node.tags)) {
       for (let i = 0; i < node.tags.length; i++) {
         if ( node.tags[i].name === 'new') {
@@ -33,6 +33,6 @@ export class BoxesListViewComponent implements OnInit {
   }
 
   onClick(row: BoxesListElementView) {
-    this.onClickEmmiter.emit(row);
+    this.clickEmmiter.emit(row);
   }
 }

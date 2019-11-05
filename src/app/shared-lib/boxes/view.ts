@@ -1,7 +1,13 @@
-import { IEdge } from './box';
+import * as BoxesList from './boxes';
+import * as BoxItems from './box-items';
+import * as BoxMeta from './box-meta';
 
-export type BoxesListView = IEdge[];
-export type BoxesListElementView = IEdge;
+export type BoxesListView = BoxesList.IEdge[];
+export type BoxesListElementView = BoxesList.IEdge;
+
+export type BoxItemsView = BoxItems.IEdge[];
+
+export type BoxMetaView = BoxMeta.INode;
 
 export class View {
 }

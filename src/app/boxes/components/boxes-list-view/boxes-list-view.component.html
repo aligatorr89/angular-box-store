@@ -1,9 +1,9 @@
 <mat-grid-list cols="7" rowHeight="400px" gutterSize="8px">
   <mat-grid-tile *ngFor="let box of boxes; trackBy:trackById">
-    <mat-card class="example-card">
+    <mat-card>
       <mat-card-header>
         <mat-card-title>
-          <button *ngIf="hasNewCategory(box.node); else nbsp" mat-flat-button color="warn" class="icon">
+          <button *ngIf="hasNewTag(box.node); else nbsp" mat-flat-button color="warn" class="icon">
             NEW
           </button>
           <ng-template #nbsp>

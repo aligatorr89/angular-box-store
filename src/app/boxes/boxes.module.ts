@@ -6,9 +6,11 @@ import { BoxesListViewComponent } from './components/boxes-list-view/boxes-list-
 import { BoxesRoutingModule } from './boxes-routing.module';
 import { BoxesMaterialModule } from './boxes-material.module';
 import { BoxComponent } from './components/box/box.component';
+import { BoxMetaViewComponent } from './components/box-meta-view/box-meta-view.component';
+import { BoxItemsViewComponent } from './components/box-items-view/box-items-view.component';
 
 @NgModule({
-  declarations: [BoxesListComponent, BoxesListViewComponent, BoxComponent],
+  declarations: [BoxesListComponent, BoxesListViewComponent, BoxComponent, BoxMetaViewComponent, BoxItemsViewComponent],
   imports: [
     CommonModule,
     HttpClientModule,

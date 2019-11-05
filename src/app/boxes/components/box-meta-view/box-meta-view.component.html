@@ -1,0 +1,16 @@
+<div *ngIf="boxMeta">
+  <table class="box-meta">
+    <tbody>
+      <tr>
+        <td><img bind-src="boxMeta.iconUrl" alt="{{boxMeta.iconUrl}}"></td>
+        <td>
+          <h1>{{ boxMeta.name }}</h1>&nbsp;&nbsp;
+          <span class="content bold">{{ boxMeta.cost }}</span>
+          <div class="">
+            <button mat-raised-button color="accent">Open</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

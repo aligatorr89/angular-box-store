@@ -1,7 +1,7 @@
 export interface INodeTags {
   id: string;
   name: string;
-  __typename: string;
+  __typename: 'Tag';
 }
 
 export interface INode {
@@ -17,22 +17,22 @@ export interface INode {
   purchasable: boolean;
   openable: boolean;
   sellable: boolean;
-  __typename: string;
+  __typename: 'Box';
 }
 
 export interface IEdge {
   node: INode;
-  __typename: string;
+  __typename: 'BoxEdge';
 }
 
-export interface IBox {
+export interface IBoxes {
   edges: IEdge[];
-  __typename: string;
+  __typename: 'BoxConnection';
 }
 
 export interface IData {
   data: {
-    boxes: IBox;
+    boxes: IBoxes;
   };
 }
 
