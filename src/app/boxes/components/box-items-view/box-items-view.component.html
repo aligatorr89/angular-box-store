@@ -1,0 +1,13 @@
+<div class="box-items-list" fxLayout="row wrap" fxLayoutGap="2px" fxLayoutAlign="space-evenly center">
+  <div fxFlex fxFlex.lt-xs="column" fxFlex.gt-xs="50%" fxFlex.gt-sm="33.333333%"
+      fxFlex.gt-md="16.666666%" fxFlex.gt-lg="12.5%" *ngFor="let edge of boxItems">
+    <div class="edge relative">
+      <button mat-flat-button class="rate">{{ edge.node.rate + '%' }}</button>
+      <img bind-src="edge.node.item.iconUrl" alt="{{edge.node.item.iconUrl}}">
+      <div class="brand">{{ edge.node.item.brand }}&nbsp;</div>
+      <div class="name">{{ edge.node.item.name }}</div>
+      <div class="cost">{{ edge.node.item.value }}</div>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+</div>

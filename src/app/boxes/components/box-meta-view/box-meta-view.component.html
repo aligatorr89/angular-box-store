@@ -1,0 +1,12 @@
+<div *ngIf="boxMeta" fxLayout="row" fxLayoutAlign="start center">
+  <div fxFlex fxFlex.lt-sm="50%" fxFlex.gt-sm="33.333333%" style="text-align:right;">
+    <img bind-src="boxMeta.iconUrl" alt="{{boxMeta.iconUrl}}">
+  </div>
+  <div fxFlex fxFlex.lt-sm="50%" fxFlex.gt-sm="66.666666%">
+    <h1>{{ boxMeta.name }}</h1>&nbsp;&nbsp;
+    <span class="content bold">{{ boxMeta.cost }}</span>
+    <div class="">
+      <button mat-raised-button color="accent">Open</button>
+    </div>
+  </div>
+</div>
